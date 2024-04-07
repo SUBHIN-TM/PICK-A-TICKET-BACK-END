@@ -6,11 +6,14 @@ export const home = (req, res) => {
       name: 'Premalu',
       language:'Malayalam',
       duration: "2Hr 36 Mins",
+      date:"from - to",
+      ticketPrice:'500',
       image: "https://www.sandhyacinehouse.com/uploads/1707217228.jpg",
       shows: [{
         screen: 'SCREEN - 1',
         time: '8.00 AM',
-        seat: 100
+        seat: 100,
+        count:0,
       },
       {
         screen: 'SCREEN - 1',
