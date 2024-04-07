@@ -87,6 +87,7 @@ export const home = (req, res) => {
     }
   ]
 
+  
 
   const ComingSoon =[{image:"https://www.sandhyacinehouse.com/uploads/1706082271.jpg"},{image:"https://www.sandhyacinehouse.com/uploads/1706165793.jpg"},{image:"https://www.sandhyacinehouse.com/uploads/1688814153.jpg"},{image:"https://www.sandhyacinehouse.com/uploads/1706166208.jpg"},{image:"https://www.sandhyacinehouse.com/uploads/1711173149.jpg"},{image:"https://www.sandhyacinehouse.com/uploads/1711173475.jpg"},{image:"https://www.sandhyacinehouse.com/uploads/1695969063.jpg"},{image:"https://www.sandhyacinehouse.com/uploads/1705558971.jpg"}]
  
