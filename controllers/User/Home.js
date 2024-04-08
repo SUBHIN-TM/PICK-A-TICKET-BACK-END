@@ -6,7 +6,7 @@ export const home=async(req,res)=>{
     console.log('Home Section');
     let ComingSoon=await UPCOMING.find()
     let movies=await MOVIES.find()
-    // console.log(ComingSoon,movies);
+    // console.log(movies);
     res.status(200).json({allData:movies,ComingSoon})
     
   } catch (error) {

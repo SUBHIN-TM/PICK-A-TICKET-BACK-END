@@ -5,7 +5,7 @@ import { AddMovies } from '../Controllers/Admin/Movies.js';
 
 
 router.post('/UpComingSection',AddUpcomingMovies);
-router.post('/AddMovies',AddMovies);
+router.get('/AddMovies',AddMovies);
 
 
 export default router;
