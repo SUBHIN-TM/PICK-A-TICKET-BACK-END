@@ -19,4 +19,3 @@ export const  AddUpcomingMovies = async (req, res) => {
     }
 }
 
-

@@ -1,8 +1,11 @@
 import express from 'express' ;
 const router = express.Router();
 import { AddUpcomingMovies } from '../Controllers/Admin/UpComingMovies.js';
+import { AddMovies } from '../Controllers/Admin/Movies.js';
 
 
-// router.get('/UpComingSection',AddUpcomingMovies);
+router.post('/UpComingSection',AddUpcomingMovies);
+router.post('/AddMovies',AddMovies);
+
 
 export default router;
