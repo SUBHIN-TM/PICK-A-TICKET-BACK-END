@@ -14,8 +14,8 @@ const allData=[
       ticket:150,
       type:"2D",
       genre:"Comedy,Romance",
-      releaseRange:{from: new Date("2024-04-04"),
-                    to:new Date("2024-05-04")}
+      releaseRange:{from: new Date("2024-06-06"),
+                    to:new Date("2024-06-09")}
     },
     {
       name: 'Manjummal Boys',
@@ -25,8 +25,8 @@ const allData=[
       ticket:150,
       type:"2D",
       genre:"Horror,Thriller",
-      releaseRange:{from: new Date("2024-04-04"),
-                    to:new Date("2024-05-04")}
+      releaseRange:{from: new Date("2024-06-06"),
+                    to:new Date("2024-06-08")}
     },
     {
       name: 'Anchakkallakokkan',
@@ -36,8 +36,8 @@ const allData=[
       ticket:150,
       type:"2D",
       genre:"Comedy,Romance",
-      releaseRange:{from: new Date("2024-04-04"),
-                    to:new Date("2024-04-10")}
+      releaseRange:{from: new Date("2024-06-07"),
+                    to:new Date("2024-06-10")}
     }
   ]
 
