@@ -5,6 +5,8 @@ const bookingSchema=new mongoose.Schema({
     date:{type:String},
     time:{type:String},
     screen:{type:String},
+    totalSeats:{ type: Map,
+        of: String},
     bookingDetails:[{
     seatNumber:[{type:String}],
     name:{type:String},
