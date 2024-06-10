@@ -52,10 +52,10 @@ export const seatSelection=async(req,res)=>{
     // console.log(req.body);
     const objectId=req.body.selectedScreen.objectId
     const{selectedSeatNumbers,name,email,mobile,total}=req.body
-    console.log(objectId,"\n",selectedSeatNumbers,"\n",name,"\n",email,"\n",mobile,"\n",total);
+    // console.log(objectId,"\n",selectedSeatNumbers,"\n",name,"\n",email,"\n",mobile,"\n",total);
    
     const indexes = selectedSeatNumbers.map(num => parseInt(num.slice(1), 10));
-    console.log(indexes); // Output: [0, 1]
+    // console.log(indexes); // Output: [0, 1]
     const totalSeatsUpdate = indexes.reduce((acc, index) => {
       acc[`totalSeats.${index}`] = "BOOKED";
       return acc;
@@ -78,7 +78,12 @@ export const seatSelection=async(req,res)=>{
       },
       {new:true}
     )
-    console.log(response);
+    console.log(response.bookingDetails[response.bookingDetails.length-1]);
+    if(response){
+      res.status(200).json({ message: 'Booking Completed Successfully', details: response.bookingDetails[response.bookingDetails.length-1] });
+    }else{
+      res.status(404).json({ message: 'Booking Not Completed' });
+    }
   } catch (error) {
    console.error(error); 
   }
