@@ -44,3 +44,42 @@ export const booking = async (req, res) => {
     res.status(500).json({ message: 'Internal server error' });
   }
 };
+
+
+export const seatSelection=async(req,res)=>{
+  try {
+    console.log("Seat selection section");
+    // console.log(req.body);
+    const objectId=req.body.selectedScreen.objectId
+    const{selectedSeatNumbers,name,email,mobile,total}=req.body
+    console.log(objectId,"\n",selectedSeatNumbers,"\n",name,"\n",email,"\n",mobile,"\n",total);
+   
+    const indexes = selectedSeatNumbers.map(num => parseInt(num.slice(1), 10));
+    console.log(indexes); // Output: [0, 1]
+    const totalSeatsUpdate = indexes.reduce((acc, index) => {
+      acc[`totalSeats.${index}`] = "BOOKED";
+      return acc;
+  }, {});
+
+    const response=await BOOKING.findByIdAndUpdate(
+      objectId,
+      {
+        $set:totalSeatsUpdate,
+        $push:{
+          bookingDetails:{
+            seatNumber:selectedSeatNumbers,
+            name:name,
+            mail:email,
+            mobile:mobile,
+            total:total,
+            paymentId:'success'
+          }
+        }
+      },
+      {new:true}
+    )
+    console.log(response);
+  } catch (error) {
+   console.error(error); 
+  }
+}
