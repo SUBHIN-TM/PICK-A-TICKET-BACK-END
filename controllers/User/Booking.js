@@ -88,3 +88,28 @@ export const seatSelection=async(req,res)=>{
    console.error(error); 
   }
 }
+
+
+export const ticketGenerator=async(req,res)=>{
+  try {
+    console.log("Ticket generator section");
+    // console.log(req.body);
+    const {id} =req.body
+    let allBookings=await BOOKING.find()
+    let response = allBookings.reduce((acc, main) => {
+      if (acc) return acc; // If we already found the result, return it
+      const inner = main.bookingDetails.find(inner => inner._id.toString() === id);
+      return inner ? { main, inner } : null;
+    }, null);
+    
+    console.log(response);
+    if(response){
+      res.status(200).json({ details: response});
+    }else{
+      res.status(404).json({ message: 'Cant find Ticket ID' });
+    }
+   
+  } catch (error) {
+    console.erro(error); 
+  }
+}
