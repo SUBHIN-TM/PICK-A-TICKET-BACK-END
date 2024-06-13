@@ -31,7 +31,7 @@ export const booking = async (req, res) => {
         date: date,
         time: time,
         screen: screen,
-        totalSeats:createTotalSeats(121),
+        totalSeats:createTotalSeats(146),
         bookingDetails: []
       });
 
@@ -110,6 +110,6 @@ export const ticketGenerator=async(req,res)=>{
     }
    
   } catch (error) {
-    console.erro(error); 
+    console.error(error); 
   }
 }
