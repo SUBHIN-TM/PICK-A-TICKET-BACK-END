@@ -1,5 +1,7 @@
 import MOVIES from "../../Models/Movies.js";
+import path from 'path'
 
+console.log();
 export const AddMovies=async()=>{
     try {
         console.log("Add Movies Section");
@@ -15,7 +17,7 @@ const allData=[
       type:"2D",
       genre:"Comedy,Romance",
       releaseRange:{from: new Date("2024-06-06"),
-                    to:new Date("2024-06-09")}
+                    to:new Date("2024-06-30")}
     },
     {
       name: 'Manjummal Boys',
@@ -26,18 +28,18 @@ const allData=[
       type:"2D",
       genre:"Horror,Thriller",
       releaseRange:{from: new Date("2024-06-06"),
-                    to:new Date("2024-06-08")}
+                    to:new Date("2024-06-30")}
     },
     {
-      name: 'Anchakkallakokkan',
-      language:'Malayalam',
+      name: 'Maharaja',
+      language:'Tamil',
       duration: "2Hr 6 Mins",
-      image: "https://www.sandhyacinehouse.com/uploads/1710842600.jpg",
+      image: "https://res.cloudinary.com/dsgctlkzt/image/upload/v1719047823/PickaTicket/maharaja_kdh9q6.jpg",
       ticket:150,
       type:"2D",
-      genre:"Comedy,Romance",
+      genre:"Action,Drama,Thriller",
       releaseRange:{from: new Date("2024-06-07"),
-                    to:new Date("2024-06-10")}
+                    to:new Date("2024-06-30")}
     }
   ]
 

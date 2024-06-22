@@ -91,11 +91,11 @@ export const ticketGenerator = async (req, res) => {
       return inner ? { main, inner } : null;
     }, null);
 
-    console.log(response);
+    // console.log(response);
     if (response) {
       res.status(200).json({ details: response });
     } else {
-      res.status(404).json({ message: 'Cant find Ticket ID' });
+      res.status(404).json({ message: 'Invalid Ticket ID' });
     }
 
   } catch (error) {
