@@ -1,4 +1,5 @@
 import BOOKING from "../../Models/Bookings.js";
+import { ticketSend } from "./Otp.js";
 
 export const booking = async (req, res) => {
   try {
@@ -44,7 +45,7 @@ export const seatSelection = async (req, res) => {
     console.log("Seat selection section");
     const objectId = req.body.selectedScreen.objectId
     const { selectedSeatNumbers, name, email, mobile, total } = req.body
-    console.log(objectId, "\n", selectedSeatNumbers, "\n", name, "\n", email, "\n", mobile, "\n", total);
+    // console.log(objectId, "\n", selectedSeatNumbers, "\n", name, "\n", email, "\n", mobile, "\n", total);
 
     const indexes = selectedSeatNumbers.map(num => parseInt(num.slice(1), 10));
     const response = await BOOKING.findByIdAndUpdate(
@@ -68,6 +69,15 @@ export const seatSelection = async (req, res) => {
     );
     
     console.log(response.bookingDetails[response.bookingDetails.length - 1]);
+    const BookingId=response.bookingDetails[response.bookingDetails.length - 1]._id
+    console.log("Booking Id IS",BookingId);
+   
+    let ticketSendResponse=await ticketSend(req.body.mobile,BookingId)
+    if(ticketSendResponse.message){
+      console.log(ticketSendResponse.message);
+    }else{
+      console.log("failed to send ticket id to mobile");
+    }
     if (response) {
       res.status(200).json({ message: 'Booking Completed Successfully', details: response.bookingDetails[response.bookingDetails.length - 1] });
     } else {
