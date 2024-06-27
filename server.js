@@ -12,7 +12,7 @@ connect()
 app.use(express.json())
 app.use(cors())
 
-app.use('/',user)
+app.get('/',user)
 app.use('/Admin',admin)
 
 
