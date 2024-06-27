@@ -6,9 +6,9 @@ export const home=async(req,res)=>{
   try {
     console.log('Home Section');
     let ComingSoon=await UPCOMING.find()
-    let movies = await MOVIES.find().sort({ createdAt: 1 });
+    let movies = await MOVIES.find().sort({"name":1});
     let screens=await SCREEN.find()
-    // console.log(movies);
+    console.log(movies);
     res.status(200).json({allData:movies,ComingSoon,screens})
     
   } catch (error) {
