@@ -1,7 +1,7 @@
 import express from "express"
 import cors from "cors"
-import user from "./routers/user.js"
-import admin from "./routers/admin.js"
+import user from "./routers/usser.js"
+import admin from "./routers/addmin.js"
 import connect from "./config/mongoConnection.js"
 
 
