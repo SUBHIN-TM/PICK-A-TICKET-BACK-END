@@ -2,14 +2,14 @@
     "version": 2,
     "builds": [
       {
-        "src": "SERVER.js", 
+        "src": "server.js", 
         "use": "@vercel/node"
       }
     ],
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "SERVER.js"
+        "dest": "server.js"
       }
     ],
     "installCommand": "npm install"
