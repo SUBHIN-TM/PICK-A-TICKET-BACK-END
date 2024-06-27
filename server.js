@@ -1,8 +1,8 @@
 import express from "express"
 import cors from "cors"
-import user from "./Routes/User.js"
-import admin from "./Routes/Admin.js"
-import connect from "./Config/MongoConnection.js"
+import user from "Routes/User.js"
+import admin from "Routes/Admin.js"
+import connect from "Config/MongoConnection.js"
 
 
 const app=express()
