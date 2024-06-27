@@ -1,5 +1,5 @@
-import BOOKING from "../../models/Bookings.js";
-import { ticketSend } from "./Otp.js";
+import BOOKING from "../../models/bookings.js";
+import { ticketSend } from "./otp.js";
 
 export const booking = async (req, res) => {
   try {

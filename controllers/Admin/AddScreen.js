@@ -1,4 +1,4 @@
-import SCREEN from "../../models/Screen.js";
+import SCREEN from "../../models/screen.js";
 
 export const AddScreens=async()=>{
     try {
