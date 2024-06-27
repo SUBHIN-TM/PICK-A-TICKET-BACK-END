@@ -6,8 +6,8 @@ import { AddScreens } from '../controllers/admin/addScreen.js';
 
 
 router.post('/UpComingSection',AddUpcomingMovies);
-router.get('/AddMovies',AddMovies);
-router.get('/AddScreens',AddScreens);
+router.post('/AddMovies',AddMovies);
+router.post('/AddScreens',AddScreens);
 
 
 

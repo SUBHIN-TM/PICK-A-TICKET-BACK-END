@@ -4,10 +4,10 @@ export const AddScreens=async()=>{
     try {
         console.log("add screen section");
         const newScreen = new SCREEN({
-            screen: 'SCREEN 1',
-            movie: 'Manjummal Boys',
+            screen: 'SCREEN 2',
+            movie: 'Maharaja',
             totalSeat: 100,
-            times: ["7:00 PM","10:00PM"]
+            times: ["9:30 AM","11:30 PM"]
         });
 
         const response = await newScreen.save();
