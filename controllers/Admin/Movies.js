@@ -1,4 +1,4 @@
-import MOVIES from "../../Models/Movies.js";
+import MOVIES from "../../models/Movies.js";
 import path from 'path'
 
 console.log();

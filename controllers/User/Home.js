@@ -1,6 +1,6 @@
-import MOVIES from "../../Models/Movies.js";
-import SCREEN from "../../Models/Screen.js";
-import UPCOMING from "../../Models/UpComingMovies.js";
+import MOVIES from "../../models/Movies.js";
+import SCREEN from "../../models/Screen.js";
+import UPCOMING from "../../models/UpComingMovies.js";
 
 export const home=async(req,res)=>{
   try {

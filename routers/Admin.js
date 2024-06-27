@@ -1,8 +1,8 @@
 import express from 'express' ;
 const router = express.Router();
-import { AddUpcomingMovies } from '../Controllers/Admin/UpComingMovies.js';
-import { AddMovies } from '../Controllers/Admin/Movies.js';
-import { AddScreens } from '../Controllers/Admin/AddScreen.js';
+import { AddUpcomingMovies } from '../controllers/Admin/UpComingMovies.js';
+import { AddMovies } from '../controllers/Admin/Movies.js';
+import { AddScreens } from '../controllers/Admin/AddScreen.js';
 
 
 router.post('/UpComingSection',AddUpcomingMovies);

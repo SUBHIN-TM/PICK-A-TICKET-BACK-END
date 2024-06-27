@@ -1,4 +1,4 @@
-import UPCOMING from '../../Models/UpComingMovies.js'
+import UPCOMING from '../../models/UpComingMovies.js'
 export const  AddUpcomingMovies = async (req, res) => {
     try {
         console.log("Upcoming Movies ADDING Section");

@@ -2,9 +2,9 @@ import express from 'express' ;
 const router = express.Router();
 
 
-import { home } from '../Controllers/User/Home.js'
-import { booking,seatSelection,ticketGenerator } from '../Controllers/User/Booking.js';
-import { otpGeneration } from '../Controllers/User/Otp.js';
+import { home } from '../controllers/User/Home.js'
+import { booking,seatSelection,ticketGenerator } from '../controllers/User/Booking.js';
+import { otpGeneration } from '../controllers/User/Otp.js';
 
 
 router.get('/',home);

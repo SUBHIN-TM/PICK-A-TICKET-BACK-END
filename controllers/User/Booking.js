@@ -1,4 +1,4 @@
-import BOOKING from "../../Models/Bookings.js";
+import BOOKING from "../../models/Bookings.js";
 import { ticketSend } from "./Otp.js";
 
 export const booking = async (req, res) => {
